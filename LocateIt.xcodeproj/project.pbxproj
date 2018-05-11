@@ -14,6 +14,11 @@
 		A0C1FC4820A50B1F00039005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0C1FC4620A50B1F00039005 /* LaunchScreen.storyboard */; };
 		A0C1FC5320A50B1F00039005 /* LocateItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C1FC5220A50B1F00039005 /* LocateItTests.swift */; };
 		A0C1FC5E20A50B1F00039005 /* LocateItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C1FC5D20A50B1F00039005 /* LocateItUITests.swift */; };
+		A0C1FC7520A51EE000039005 /* Drone.dae in Resources */ = {isa = PBXBuildFile; fileRef = A0C1FC7420A51EE000039005 /* Drone.dae */; };
+		A0C1FC7720A51EFC00039005 /* Drone.scn in Resources */ = {isa = PBXBuildFile; fileRef = A0C1FC7620A51EFC00039005 /* Drone.scn */; };
+		A0C1FC7A20A53BF500039005 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C1FC7920A53BF500039005 /* MapKit.framework */; };
+		A0C1FC7C20A6100800039005 /* dragon.dae in Resources */ = {isa = PBXBuildFile; fileRef = A0C1FC7B20A6100800039005 /* dragon.dae */; };
+		A0C1FC7E20A6102700039005 /* dragon.scn in Resources */ = {isa = PBXBuildFile; fileRef = A0C1FC7D20A6102700039005 /* dragon.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		A0C1FC5920A50B1F00039005 /* LocateItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocateItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C1FC5D20A50B1F00039005 /* LocateItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateItUITests.swift; sourceTree = "<group>"; };
 		A0C1FC5F20A50B1F00039005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0C1FC7420A51EE000039005 /* Drone.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Drone.dae; sourceTree = "<group>"; };
+		A0C1FC7620A51EFC00039005 /* Drone.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Drone.scn; sourceTree = "<group>"; };
+		A0C1FC7920A53BF500039005 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A0C1FC7B20A6100800039005 /* dragon.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = dragon.dae; sourceTree = "<group>"; };
+		A0C1FC7D20A6102700039005 /* dragon.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = dragon.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C1FC7A20A53BF500039005 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +92,7 @@
 				A0C1FC5120A50B1F00039005 /* LocateItTests */,
 				A0C1FC5C20A50B1F00039005 /* LocateItUITests */,
 				A0C1FC3B20A50B1D00039005 /* Products */,
+				A0C1FC7820A53BF500039005 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +109,7 @@
 		A0C1FC3C20A50B1D00039005 /* LocateIt */ = {
 			isa = PBXGroup;
 			children = (
+				A0C1FC7020A51D2000039005 /* Objects */,
 				A0C1FC3D20A50B1D00039005 /* AppDelegate.swift */,
 				A0C1FC3F20A50B1D00039005 /* ViewController.swift */,
 				A0C1FC4120A50B1D00039005 /* Main.storyboard */,
@@ -123,6 +136,25 @@
 				A0C1FC5F20A50B1F00039005 /* Info.plist */,
 			);
 			path = LocateItUITests;
+			sourceTree = "<group>";
+		};
+		A0C1FC7020A51D2000039005 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				A0C1FC7420A51EE000039005 /* Drone.dae */,
+				A0C1FC7620A51EFC00039005 /* Drone.scn */,
+				A0C1FC7B20A6100800039005 /* dragon.dae */,
+				A0C1FC7D20A6102700039005 /* dragon.scn */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		A0C1FC7820A53BF500039005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0C1FC7920A53BF500039005 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +225,14 @@
 				TargetAttributes = {
 					A0C1FC3920A50B1D00039005 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A0C1FC4D20A50B1F00039005 = {
 						CreatedOnToolsVersion = 9.3;
@@ -231,6 +271,10 @@
 			files = (
 				A0C1FC4820A50B1F00039005 /* LaunchScreen.storyboard in Resources */,
 				A0C1FC4520A50B1F00039005 /* Assets.xcassets in Resources */,
+				A0C1FC7E20A6102700039005 /* dragon.scn in Resources */,
+				A0C1FC7520A51EE000039005 /* Drone.dae in Resources */,
+				A0C1FC7C20A6100800039005 /* dragon.dae in Resources */,
+				A0C1FC7720A51EFC00039005 /* Drone.scn in Resources */,
 				A0C1FC4320A50B1D00039005 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
